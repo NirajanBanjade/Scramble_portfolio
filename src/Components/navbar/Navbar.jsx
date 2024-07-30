@@ -3,6 +3,7 @@ import './Navbar1.css';
 import logoo from './logoo.jpg';
 import Mobilenav from "./mobilenav/Mobilenav.jsx";
 import { useState } from "react";
+import ban2 from './Ban2.png';
 const Navbar = ()=>{
 
     const [openMenu,setOpenMenu] = useState(false);

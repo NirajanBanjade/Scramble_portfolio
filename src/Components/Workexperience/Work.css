@@ -1,0 +1,21 @@
+.work-experience{
+    margin: 4rem 0;
+    position:relative;
+}
+.work-experience h5{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+.experience-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+@media(max-width: 640px){
+    .experience-container{
+        flex-direction: column;
+    }
+
+}
