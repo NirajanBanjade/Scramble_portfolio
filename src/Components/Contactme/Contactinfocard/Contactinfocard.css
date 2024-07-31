@@ -3,4 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: #171521;
+    border-radius: 0.65rem;
+    border: 1.5px solid rgb(26, 92, 118);
+    margin-bottom: 2rem;
 }

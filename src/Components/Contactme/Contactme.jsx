@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Contactme.css";
 import Contactinfocard from './Contactinfocard/Contactinfocard';
+import Contactform from './Contactform/Contactform';
 
 const Contactme = () => {
   return (
@@ -16,6 +17,9 @@ const Contactme = () => {
             <div style={{flex:1}}>
             <Contactinfocard  iconClass="bi bi-github"
                 text="https://github.com/NirajanBanjade"/>
+            </div>
+            <div className='contact-form' style={{flex:1}}>
+              <Contactform/>
             </div>
         </div>
     </section>
