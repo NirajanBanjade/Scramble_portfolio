@@ -5,7 +5,7 @@ const Contactform = () => {
     <div className="contact-form-content">
         <form className='for'>
     
-            <input type="text" name ="name" placeholder='First Last'/>
+            <input type="text" name ="name" placeholder='Full Name'/>
 
 
             <input type="text" name="email" placeholder='Email'/>

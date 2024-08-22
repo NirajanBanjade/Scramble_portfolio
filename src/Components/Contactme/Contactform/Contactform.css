@@ -27,11 +27,11 @@ form textarea {
     width: 100%; /* Adjust to full width of form container */
     max-width: 500px; /* Optional: Set a maximum width if needed */
     font-size: 0.9rem;
-    color: beige;
+    color: white;
     border: 1.5px solid skyblue;
     border-radius: 0.6rem;
     padding: 1rem;
-    background: rgb(134, 175, 175);
+    background: rgb(189, 219, 219);
 }
 
 button {

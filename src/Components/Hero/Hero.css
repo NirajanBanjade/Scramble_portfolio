@@ -134,6 +134,8 @@ tech{
     }
     .Image >div >img{
         width: 16rem;
+        height: 16rem;
+
     }
     .tech{
         width: 3.3rem;
