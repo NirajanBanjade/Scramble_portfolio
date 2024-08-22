@@ -9,13 +9,3 @@
     border: 1.5px solid rgb(26, 92, 118);
     margin-bottom: 2rem;
 }
-input::placeholder, 
-textarea::placeholder {
-    color: black; /* Change this to any color you like */
-    opacity: 1; 
-}
-input[type="text"], 
-textarea {
-    /* background-color: #fff; */
-    color: black;
-}

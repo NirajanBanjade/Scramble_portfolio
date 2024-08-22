@@ -67,3 +67,12 @@ form button:hover {
         width: 100%; /* Ensure form elements take full width of container */
     }
 }
+.for input[type="text"], 
+.for textarea {
+    color: black;
+}
+input::placeholder, 
+textarea::placeholder {
+    color: black; /* Change this to any color you like */
+    opacity: 1; 
+}
