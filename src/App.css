@@ -1,4 +1,4 @@
-.container{
+/* .container{
   max-width: 1300px !important ;
   margin: 0 auto;
   position: relative;
@@ -8,4 +8,27 @@
   .container{
     padding : 0 1.5rem;
   }
+}
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1300px !important;
+  width: 100%;  /* ✅ Ensures it adapts to all screen sizes */
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (max-width: 1300px) {
+  .container {
+    padding: 0 1rem; /* ✅ Adjust padding for better alignment */
+  }
+}
+
+body {
+  color: white;
+  background-color: black;
 }
