@@ -16,7 +16,6 @@
 .mobile-menu-container{
     width:60vw;
     height:100vh;
-    background-color: orange;
     padding: 2rem;
 }
 .mobile-menu.active{

@@ -3,7 +3,7 @@ export const ProjectData=[
     {
         title: "N-Store",
         description: "A dynamic mock e-commerce platform for tech products, featuring a seamless user interface, and responsive design.",
-        githublink: " "
+        // githublink: " "
     },
     {
         title: "Online Prescription System",

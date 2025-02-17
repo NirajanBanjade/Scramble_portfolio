@@ -1,0 +1,77 @@
+/* Project Card Styling */
+.project-card {
+    background-color: #211f33;  /* Dark gray background */
+    color: white; 
+    border: 2px solid #444;  /* Subtle border */
+    border-radius: 15px;  /* Rounded corners */
+    padding: 20px;  /* Spacing inside the card */
+    margin: 10px;  /* Space between cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover Effect */
+  .project-card:hover {
+    transform: scale(1.05);  /* Slight enlargement */
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);  /* White glow effect */
+    border-color: white;
+  }
+  
+  /* Project Header */
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Project Title */
+  .project-header h3 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  /* Project Links */
+  .project-links {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .icon:hover {
+    color: #facc15; /* Yellow on hover */
+    transform: scale(1.2);
+  }
+  
+  /* Project Description */
+  .project-description {
+    font-size: 16px;
+    color: #ddd;
+    margin-top: 10px;
+  }
+  
+  /* Tech Stack (Tags) */
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+  }
+  
+  .tech-tag {
+    background-color: #e09ec6;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tech-tag:hover {
+    background-color: #facc15;  /* Yellow hover effect */
+    color: black;
+  }
+  

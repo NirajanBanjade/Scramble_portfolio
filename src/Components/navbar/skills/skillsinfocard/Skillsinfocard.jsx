@@ -13,7 +13,7 @@ const Skillsinfocard = ({ heading, skills }) => {
               <p className='percentage'>{item.percentage}</p>
             </div>
             <div className='skills-progress-bg'>
-              <div className='skills-progress' style={{ width: `${item.percentage}` }}>
+              <div className='skills-progress' style={{ width: "100%" }}>
                 </div>
             </div>
           </React.Fragment>

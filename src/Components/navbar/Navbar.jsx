@@ -1,47 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar1.css";
-import logoo from "./logoo.jpg";
 import Mobilenav from "./mobilenav/Mobilenav.jsx";
-import { useState } from "react";
-import ban2 from "./Ban2.png";
-import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <Mobilenav isOpen={openMenu} toggleMenu={toggleMenu} />
       <nav className="nav-wrapper">
         <div className="nav-content">
-          <img className="mylogo" src={logoo} alt="Logo" />
-
           <ul>
             <li>
-              <a className="nav_item">Home</a>
-              {/* <Link to="/Home" className="nav_item">Home</Link> */}
+              <a className="nav_item" onClick={() => scrollToSection("home")}>Home</a>
             </li>
             <li>
-              <a className="nav_item">Skills</a>
-              {/* <Link to="/Skills" className="nav_item">Skills</Link>  */}
+              <a className="nav_item" onClick={() => scrollToSection("skills")}>Skills</a>
             </li>
             <li>
-              <a className="nav_item">Experience</a>
-              {/* <Link to="/Work-Experience" className="nav_item">Work-Experience</Link>  */}
+              <a className="nav_item" onClick={() => scrollToSection("experience")}>Experience</a>
             </li>
             <li>
-              <a className="nav_item">Contact</a>
-              {/* <Link to="/Projects" className="nav_item">Projects</Link>  */}
+              <a className="nav_item" onClick={() => scrollToSection("projects")}>Projects</a>
             </li>
-            <button className="hire">Hire Me</button>
+            <li>
+              <a className="nav_item" onClick={() => scrollToSection("contact")}>Contact</a>
+            </li>
           </ul>
           <button className="menu-btn" onClick={toggleMenu}>
-            <span
-              className="material-symbols-outlined"
-              style={{ fontSize: "0.9rem" }}
-            >
+            <span className="material-symbols-outlined" style={{ fontSize: "0.9rem" }}>
               {openMenu ? "close" : "menu"}
             </span>
           </button>
@@ -50,4 +48,5 @@ const Navbar = () => {
     </>
   );
 };
+
 export default Navbar;

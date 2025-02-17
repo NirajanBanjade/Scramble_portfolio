@@ -16,4 +16,4 @@ const Contactform = () => {
   )
 }
 
-export default Contactform
+export default Contactform;

@@ -30,7 +30,7 @@
 .skills-content{
     display:flex;
     align-items: flex-start;
-    gap:3rem;
+    gap:20rem;
 }
 .skills{
     flex:1;

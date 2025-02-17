@@ -17,7 +17,7 @@ form {
 .name-content {
     font-size: 0.9rem;
     color: #fff;
-    border: 1.5px solid skyblue;
+    /* border: 1.5px solid skyblue; */
     border-radius: 0.6rem;
     padding: 1rem;
 }

@@ -5,17 +5,28 @@ import Skills from './Components/navbar/skills/Skills.jsx';
 import Work from './Components/Workexperience/Work.jsx';
 import Projects from './Components/Projects/Projects.jsx';
 import Contactme from './Components/Contactme/Contactme.jsx';
+
 function App() {
   return (
     <>
-    <Navbar/>
-    <div className='container'>
-      <Hero/>
-      <Skills/>
-      <Work/>
-      {/* <Projects/> */}
-      <Contactme/>
-    </div>
+      <Navbar />
+      <div className='container'>
+        <section id="home">
+          <Hero />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="experience">
+          <Work />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="contact">
+          <Contactme />
+        </section>
+      </div>
     </>
   );
 }

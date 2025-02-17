@@ -1,31 +1,37 @@
-import React from 'react'
-import logo from "../logoo.jpg"
-import './mobileNav.css';
+import React from "react";
+import "./mobileNav.css";
 
-const Mobilenav = ({isOpen, toggleMenu}) => {
+const Mobilenav = ({ isOpen, toggleMenu }) => {
+  
+  // Function to scroll to section and close the menu
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      toggleMenu(); // Close menu after clicking
+    }
+  };
+
   return (
     <>
-      <div
-        className={`mobile-menu ${isOpen ? "active" : " "}`}
-        onClick={toggleMenu}
-      >
+      <div className={`mobile-menu ${isOpen ? "active" : ""}`} onClick={toggleMenu}>
         <div className="mobile-menu-container">
-          {/* <img className="mylogo" src={logo} alt="" /> no display of logo */}
           <ul>
             <li>
-              <a className="nav_item">Home</a>
+              <a className="nav_item" onClick={() => scrollToSection("home")}>Home</a>
             </li>
             <li>
-              <a className="nav_item">Education</a>
+              <a className="nav_item" onClick={() => scrollToSection("skills")}>Skills</a>
             </li>
             <li>
-              <a className="nav_item">Work-Experience</a>
+              <a className="nav_item" onClick={() => scrollToSection("experience")}>Experience</a>
             </li>
             <li>
-              <a className="nav_item">Projects</a>
+              <a className="nav_item" onClick={() => scrollToSection("projects")}>Projects</a>
             </li>
-            <button className="hire" onClick={()=>{}}>Hire Me</button>
-
+            <li>
+              <a className="nav_item" onClick={() => scrollToSection("contact")}>Contact</a>
+            </li>
           </ul>
         </div>
       </div>

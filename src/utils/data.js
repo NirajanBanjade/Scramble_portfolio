@@ -9,19 +9,19 @@ export const Data=[
         title: "Frontend",
         icon: front1,
         skills:[
-            {skill: "HTML5" , percentage: "95%"},
-            {skill: "CSS3", percentage: "90%"},
-            {skill: "JavaScript", percentage:"70%"},
-            {skill: "React.js", percentage:"70%"},
-            {skill: "Redux", percentage: "50%"},
+            {skill: "HTML5"},
+            {skill: "CSS3"},
+            {skill: "JavaScript"},
+            {skill: "React.js"},
+            {skill: "Redux"},
         ],
     },
     {   
         title: "Backend",
         icon: back,
         skills:[
-            {skill: "Node.js" , percentage: "70%"},
-            {skill: "Express.js", percentage: "60%"},
+            {skill: "Node.js"},
+            {skill: "Express.js"},
             
         ],
     },
@@ -29,9 +29,9 @@ export const Data=[
         title: "AI/ML",
         icon: ml,
         skills:[
-            {skill: "Python" , percentage: "85%"},
-            {skill: "Parallel-Computing", percentage: "60%"},
-            {skill: "Deep-Learning", percentage: "60%"},
+            {skill: "Python" },
+            {skill: "Parallel-Computing"},
+            {skill: "Deep-Learning"},
 
         ],
     },
@@ -39,17 +39,17 @@ export const Data=[
         title: "Database",
         icon: database,
         skills:[
-            {skill: "Mongo.db" , percentage: "70%"},
-            {skill: "SQL", percentage: "80%"},
+            {skill: "Mongo.db"},
+            {skill: "SQL"},
         ],
     },
     {   
         title: "Tools",
         icon: software,
         skills:[
-            {skill: "Git/GitHub" , percentage: "80%"},
-            {skill: "VS code", percentage: "80%"},
-            {skill: "Jupyter", percentage: "60%"},
+            {skill: "Git/GitHub" },
+            {skill: "VS code"},
+            {skill: "Jupyter"},
 
         ],
     },

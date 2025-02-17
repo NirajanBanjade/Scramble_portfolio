@@ -6,24 +6,28 @@ import Contactform from './Contactform/Contactform';
 const Contactme = () => {
   return (
     <section className='contact-container'>
-        <h5>Contact Me</h5>
+      <h5>Contact Me</h5>
 
-        <div className='contact-content'>
-            <div style={{flex:1}}>
-
-                <Contactinfocard iconClass="bi bi-envelope"
-                text = "nirajanbanjade321@gmail.com"/>    
-            </div>
-            <div style={{flex:1}}>
-            <Contactinfocard  iconClass="bi bi-github"
-                text="https://github.com/NirajanBanjade"/>
-            </div>
-            <div className='contact-form' style={{flex:1}}>
-              <Contactform/>
-            </div>
+      <div className='contact-content'>
+        {/* Contact Info Wrapper */}
+        <div className="contact-info">
+          <Contactinfocard
+            iconClass="bi bi-linkedin"
+            text={<a href="https://www.linkedin.com/in/nirajan-banjade/" target="_blank" rel="noopener noreferrer">LinkedIn</a>}
+          />
+          <Contactinfocard
+            iconClass="bi bi-github"
+            text={<a href="https://github.com/NirajanBanjade" target="_blank" rel="noopener noreferrer">Github</a>}
+          />
+          <Contactinfocard 
+            iconClass="bi bi-envelope"
+            text={<a href="mailto:nirajanbanjade321@gmail.com">nirajanbanjade321@gmail.com</a>}
+          />
         </div>
-    </section>
-  )
-}
 
-export default Contactme
+      </div>
+    </section>
+  );
+};
+
+export default Contactme;
