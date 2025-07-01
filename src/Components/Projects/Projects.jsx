@@ -5,6 +5,18 @@ import './Projects.css'
 // Project data with technologies list
 export const ProjectData = [
   {
+    title: "Kwizzy",
+    description: "Kwizzy is an AI-powered quiz platform that generates personalized assessments in real time. It supports adaptive feedback, secure login, and performance analytics to enhance learning outcomes.",
+    githublink: "https://github.com/NirajanBanjade/Kwizzy",
+    technologies: ["React", "Node.js", "PostgreSQL", "Express", "Tailwind CSS", "JWT"]
+  },
+  {
+    title: "Library Management System",
+    description: "A full-stack system to manage books, users, and issue/return transactions. Includes admin dashboard, user authentication, and inventory tracking features.",
+    githublink: "https://github.com/NirajanBanjade/Library-Management",
+    technologies: ["React", "Node.js", "MongoDB", "Express"]
+  },
+  {
     title: "N-Store",
     description: "A dynamic mock e-commerce platform for tech products, featuring a seamless user interface and responsive design.",
     githublink: "https://github.com/NirajanBanjade/E-commerce-Website",
@@ -12,19 +24,14 @@ export const ProjectData = [
     technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"]
   },
   {
-    title:"Mapmarker",
-    description: "MapMarker is an advanced smart parking and location tracking app that helps users find, track, and manage their parking spots efficiently. The app provides real-time information about time tracking, and GPS-based location tracking, ensuring that users never lose track of their parked vehicles.",
+    title: "Mapmarker",
+    description: "MapMarker is a smart parking and location tracking app that helps users find, track, and manage their parking spots efficiently. It features GPS-based tracking, real-time status updates, and intuitive time management.",
     githublink: "https://github.com/NirajanBanjade/Mapmarker",
     technologies: ["React.js", "Tailwind CSS"]
-  },
-  {
-    title: "Online Prescription System",
-    description: "A robust Hospital Management System using the Tkinter library for the graphical user interface and MySQL for patient data management.",
-    githublink: "https://github.com/NirajanBanjade/Hospital",
-    // projectlink: "https://prescriptionsystem.com",
-    technologies: ["Python", "Tkinter", "MySQL"]
   }
-];
+
+]
+
 
 const ProjectCard = ({ title, description, githublink, projectlink, technologies }) => {
   return (
