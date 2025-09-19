@@ -1,15 +1,205 @@
 .contact-container{
-    margin:4rem 0;
-    position:relative;
+    margin: 4rem 0;
+    position: relative;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    box-shadow: 
+      0 32px 64px -12px rgba(0, 0, 0, 0.8),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05),
+      0 0 0 1px rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .contact-container h5{
-    font-size:1.5rem;
-    font-weight:600;
-    margin-bottom:3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #22c55e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
 .contact-content{
-    display: grid;
-    gap: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-link {
+    display: inline-block;   /* makes the clickable area solid */
+    pointer-events: auto;    /* belt-and-braces */
+  }
+/* Contact Info Card Styling */
+.contact-info-card {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(10, 10, 10, 0.6) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(20px);
+    box-shadow: 
+      0 12px 40px -12px rgba(0, 0, 0, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+    min-width: 200px;
+}
+
+.contact-info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 50%, #22c55e 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.contact-info-card:hover::before {
+    transform: scaleX(1);
+}
+
+.contact-info-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+      0 20px 40px -12px rgba(0, 0, 0, 0.7),
+      0 0 0 1px rgba(59, 130, 246, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-color: rgba(59, 130, 246, 0.4);
+}
+
+.contact-info-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #22c55e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.contact-info-card a {
+    color: #f1f5f9;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info-card a:hover {
+    color: #3b82f6;
+    text-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        margin: 2rem 0;
+        padding: 2rem 1rem;
+        border-radius: 16px;
+    }
+    
+    .contact-container h5 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-content {
+        gap: 1.5rem;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .contact-info-card {
+        padding: 1.5rem;
+        min-width: 180px;
+    }
+    
+    .contact-info-card .icon {
+        font-size: 2rem;
+    }
+    
+    .contact-info-card a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        margin: 1rem 0;
+        padding: 1.5rem 0.5rem;
+    }
+    
+    .contact-container h5 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .contact-info-card {
+        padding: 1.25rem;
+        min-width: 160px;
+    }
+    
+    .contact-info-card .icon {
+        font-size: 1.75rem;
+    }
+    
+    .contact-info-card a {
+        font-size: 0.9rem;
+    }
+}
+
+
+  
+/* The reveal wrapper should never block clicks */
+.reveal-container { pointer-events: auto !important; }
+
+/* Cards and overlays */
+.contact-info-card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* If you use decorative ::before/::after, make them non-interactive */
+.contact-info-card::before,
+.contact-info-card::after {
+  pointer-events: none;
+}
+
+/* Icons shouldn’t eat clicks */
+.contact-info-card .icon {
+  pointer-events: none;
+}
+
+/* Links should sit on top and be clickable */
+.contact-link {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  pointer-events: auto;
 }

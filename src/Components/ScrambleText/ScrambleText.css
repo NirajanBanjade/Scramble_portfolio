@@ -1,0 +1,41 @@
+.scramble-text {
+  display: inline-block;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.05em;
+}
+
+.scramble-text.animating {
+  color: #00ff88;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.scramble-text:not(.animating) {
+  color: inherit;
+  text-shadow: none;
+  transition: all 0.3s ease;
+}
+
+/* --- layout stabilizer --- */
+
+
+/* Grid overlay: no absolute positioning */
+
+
+.scramble-text {
+  letter-spacing: 0.05em;
+  font-variant-ligatures: none;
+}
+
+/* During animation, force monospace so every glyph has the same width */
+.scramble-text.animating {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  color: #00ff88;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+/* Don’t animate layout props */
+.scramble-text:not(.animating) {
+  color: inherit;
+  text-shadow: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}

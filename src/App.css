@@ -1,45 +1,155 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.container {
-  max-width: 1300px !important;
-  width: 100%;  /* ✅ Ensures it adapts to all screen sizes */
-  margin: 0 auto;
-  position: relative;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
-@media (max-width: 1300px) {
-  .container {
-    padding: 0 1rem; /* ✅ Adjust padding for better alignment */
-  }
-}
-
-body {
-  color: white;
-  background-color: black;
-}
-
-
+/* Smooth scrolling for all elements */
 * {
-  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #f1f5f9;
+  background: linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #111111 50%, #0d0d0d 75%, #000000 100%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Blackish dark theme with subtle gradients */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(34, 197, 94, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Additional subtle overlay for depth */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(45deg, transparent 0%, rgba(0, 0, 0, 0.1) 50%, transparent 100%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .container {
   max-width: 1300px !important;
-  width: 100%;  /* ✅ Ensures it adapts to all screen sizes */
+  width: 100%;
   margin: 0 auto;
   position: relative;
+  padding: 0 2rem;
 }
 
 @media (max-width: 1300px) {
   .container {
-    padding: 0 1rem; /* ✅ Adjust padding for better alignment */
+    padding: 0 1.5rem;
   }
 }
 
-body {
-  color: white;
-  background-color: black;
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Professional typography with blackish theme */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #22c55e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #f1f5f9;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #e2e8f0;
+}
+
+h4, h5, h6 {
+  color: #cbd5e1;
+}
+
+p {
+  color: #a1a1aa;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Professional scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(102, 126, 234, 0.3);
+  color: #f8fafc;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
 }

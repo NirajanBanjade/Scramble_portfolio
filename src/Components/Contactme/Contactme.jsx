@@ -1,30 +1,52 @@
 import React from 'react';
 import "./Contactme.css";
-import Contactinfocard from './Contactinfocard/Contactinfocard';
-import Contactform from './Contactform/Contactform';
+import ScrambleText from '../ScrambleText/ScrambleText';
+import RevealOnScroll from '../RevealOnScroll/RevealOnScroll';
 
 const Contactme = () => {
   return (
     <section className='contact-container'>
-      <h5>Contact Me</h5>
+      <RevealOnScroll direction="up" delay={0.2}>
+        <h5>
+          <ScrambleText 
+            text="Contact Me" 
+            delay={200}
+            duration={800}
+            triggerOnScroll={true}
+          />
+        </h5>
+      </RevealOnScroll>
 
       <div className='contact-content'>
         {/* Contact Info Wrapper */}
-        <div className="contact-info">
-          <Contactinfocard
-            iconClass="bi bi-linkedin"
-            text={<a href="https://www.linkedin.com/in/nirajan-banjade/" target="_blank" rel="noopener noreferrer">LinkedIn</a>}
-          />
-          <Contactinfocard
-            iconClass="bi bi-github"
-            text={<a href="https://github.com/NirajanBanjade" target="_blank" rel="noopener noreferrer">Github</a>}
-          />
-          <Contactinfocard 
-            iconClass="bi bi-envelope"
-            text={<a href="mailto:nirajanbanjade321@gmail.com">nirajanbanjade321@gmail.com</a>}
-          />
-        </div>
-
+        <RevealOnScroll direction="left" delay={0.4}>
+          <div className="contact-info">
+            <RevealOnScroll direction="scale" delay={0.6}>
+              <div className="contact-info-card">
+                <div className="icon bi bi-linkedin"></div>
+                <a href="https://www.linkedin.com/in/nirajan-banjade/" target="_blank" rel="noopener noreferrer" className='contact-link'>
+                  LinkedIn
+                </a>
+              </div>
+            </RevealOnScroll>
+            <RevealOnScroll direction="scale" delay={0.8}>
+              <div className="contact-info-card">
+                <div className="icon bi bi-github"></div>
+                <a href="https://github.com/NirajanBanjade" target="_blank" rel="noopener noreferrer" className='contact-link'>
+                  GitHub
+                </a>
+              </div>
+            </RevealOnScroll>
+            <RevealOnScroll direction="scale" delay={1.0}>
+              <div className="contact-info-card">
+                <div className="icon bi bi-envelope" ></div>
+                <a href="mailto:nirajanbanjade321@gmail.com" className='contact-link'>
+                  Email Me
+                </a>
+              </div>
+            </RevealOnScroll>
+          </div>
+        </RevealOnScroll>
       </div>
     </section>
   );

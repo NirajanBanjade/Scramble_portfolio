@@ -2,33 +2,68 @@
 .Hcontainer{
     display: flex;
     align-items: center;
-    position:relative;
+    position: relative;
+    min-height: 100vh;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    margin: 2rem 0;
+    box-shadow: 
+      0 32px 64px -12px rgba(0, 0, 0, 0.8),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05),
+      0 0 0 1px rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 .Hcontainer::after,.Hcontainer::before{
     content:"";
     width:28.125rem;
     height:28.125rem;
     border-radius: 28.125rem;
-    /* background: rgb(58, 164, 206); */
-    /* background: rgb(64, 144, 176); */
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.15) 50%, rgba(34, 197, 94, 0.1) 100%);
     position: absolute;
     z-index: -1;
-    filter: blur(225px);
+    filter: blur(200px);
+    animation: float 8s ease-in-out infinite;
+}
+.Hcontainer::after {
+    top: 10%;
+    right: 10%;
+    animation-delay: -3s;
+}
+.Hcontainer::before {
+    bottom: 10%;
+    left: 10%;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
 }
 .Hcontent{
     flex:1;
+    padding: 2rem;
+    z-index: 2;
 }
 .Hcontent h2{
-    font-size: 3.8 rem;
-    font-weight: 600;
-    line-height: 5rem;
-    margin-bottom: 1rem;
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 .Hcontent p{
-    width: 80%;
-    font-size: 1rem;
+    width: 90%;
+    font-size: 1.1rem;
     font-weight: 400;
-    line-height: 2rem;
+    line-height: 1.8;
+    color: #cbd5e1;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 .Image {
     flex:1;
@@ -37,6 +72,8 @@
     align-items: flex-end;
     gap:2rem;
     margin-top:3rem;
+    padding: 2rem;
+    z-index: 2;
 }
 .Image > div{
     display:flex;
@@ -45,12 +82,17 @@
 }
 .Image > div > img{
     width: 25rem;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 20px;
+    box-shadow: 
+      0 20px 40px -12px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 .Image img{
     height: 350px;
     width: 400px;
-    border-radius: 50px;
+    border-radius: 20px;
+    object-fit: cover;
 }
 .tech{
     width:5rem;
@@ -59,29 +101,52 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    border-radius: 0.65rem;
-    border:1.5px solid #6852ba;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 
+      0 8px 32px -8px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .tech img{
     width:3rem;
     height:auto;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(1.1) contrast(1.1);
 }
-.Image > div >img:hover, .tech img:hover{
-    transform: translateY(-0.6rem);
+.Image > div >img:hover, .tech:hover{
+    transform: translateY(-0.8rem) scale(1.05);
+    box-shadow: 
+      0 25px 50px -12px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(102, 126, 234, 0.2);
+}
+.tech:hover {
+    border-color: rgba(102, 126, 234, 0.6);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+}
+.tech img:hover{
+    transform: scale(1.1);
+    filter: brightness(1.3) contrast(1.2);
 }
 
 @media(max-width: 1025px){
+    .Hcontainer{
+        padding: 2rem 0;
+        margin: 1rem 0;
+    }
     .Hcontent h2{
-        font-size: 3rem;
-        line-height: 4rem;
+        font-size: 2.5rem;
+        line-height: 1.2;
     }
     .Hcontent p{
-        font-size: 0.9rem;
-        line-height: 1.6rem;
+        font-size: 1rem;
+        line-height: 1.6;
     }
     .Image >div >img{
         width: 20rem;
+        height: 20rem;
     }
     .tech{
         width:4rem;
@@ -93,55 +158,81 @@
 }
 @media(max-width: 768px){
     .Hcontainer{
-        flex-direction:column;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        margin: 1rem 0;
+        border-radius: 16px;
     }
-    .Image{
-        margin:2rem 0 2rem 0;
-    }
-    .Hcontainer h2{
-        margin-top:3rem;
-    }
-    .Hcontentainer h2, .Hcontainer p{
-        width:auto;
+    .Hcontent{
+        padding: 1rem;
         text-align: center;
     }
-    .Hcontainer::after, .Hcontainer::before{
-        content: "";
-        width:18rem;
-        height: 18rem;
+    .Hcontent h2{
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
     }
-    .Hcontainer::after{
-        top: 0rem;
-        left: rem;
+    .Hcontent p{
+        font-size: 0.95rem;
+        line-height: 1.5;
+        width: 100%;
+        margin-bottom: 1rem;
     }
-    .Hcontainer::before{
-        bottom: 2rem;
-        right: 0rem;
+    .Image{
+        margin: 2rem 0;
+        align-items: center;
     }
-
-}
-@media (max-width:600px){
-    .Hcontainer h2{
-        font-size: 2.2rem;
-        line-height: 3rem;
+    .Image > div{
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
     }
-    .Hcontentainer p{
-        font-size: 0.8rem;
-        line-height: 1.3rem;
-    }
-    .Image, .Image >div{
-        gap:1rem;
-    }
-    .Image >div >img{
+    .Image > div > img{
         width: 16rem;
         height: 16rem;
-
+    }
+    .Hcontainer::after, .Hcontainer::before{
+        width: 12rem;
+        height: 12rem;
+    }
+    .Hcontainer::after{
+        top: 5%;
+        right: 5%;
+    }
+    .Hcontainer::before{
+        bottom: 5%;
+        left: 5%;
+    }
+}
+@media (max-width: 600px){
+    .Hcontainer{
+        padding: 1.5rem 0.5rem;
+        margin: 0.5rem 0;
+    }
+    .Hcontent h2{
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    .Hcontent p{
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    .Image, .Image > div{
+        gap: 1rem;
+    }
+    .Image > div > img{
+        width: 14rem;
+        height: 14rem;
     }
     .tech{
-        width: 3.3rem;
-        height: 3.3rem;
+        width: 3rem;
+        height: 3rem;
     }
     .tech img{
-        width: 2rem;
+        width: 1.8rem;
+    }
+    .Hcontainer::after, .Hcontainer::before{
+        width: 8rem;
+        height: 8rem;
     }
 }
