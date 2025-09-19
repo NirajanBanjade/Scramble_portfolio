@@ -1,8 +1,6 @@
 import front1 from "./front1.png"
 import back from "./backend.png"
 import database from "./database.png"
-import tools from "./library.png"
-import ml from "./ml.png"
 import software from "./software.png"
 export const Data = [
     {
