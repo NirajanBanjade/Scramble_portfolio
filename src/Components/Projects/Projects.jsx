@@ -1,11 +1,12 @@
 import React from "react";
-import { ExternalLink, Github } from "lucide-react";
 import './Projects.css';
 import ScrambleText from '../ScrambleText/ScrambleText';
 import RevealOnScroll from '../RevealOnScroll/RevealOnScroll';
 import kafka_img from "../../utils/Dashboard.png"
 import xstack_img from "../../utils/xtack.jpeg"
 // Project data with technologies list and images
+
+import { Github } from "lucide-react";
 export const ProjectData = [
 
   {
