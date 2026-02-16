@@ -87,6 +87,16 @@ const Navbar = () => {
                 Home
               </a>
             </li>
+            <a
+                className="nav_item"
+                href="#education"
+                onClick={(e) => handleNavClick(e, "education")}
+              >
+                Education
+              </a>
+            <li>
+
+            </li>
             <li>
               <a
                 className="nav_item"
