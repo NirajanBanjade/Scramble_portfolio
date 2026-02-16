@@ -4,8 +4,8 @@ import ScrambleText from '../ScrambleText/ScrambleText';
 import RevealOnScroll from '../RevealOnScroll/RevealOnScroll';
 import kafka_img from "../../utils/Dashboard.png"
 import xstack_img from "../../utils/xtack.jpeg"
-import morse from "../../utils/morse.png"
-import book from "../../utils/book.png"
+import morse from "../../utils/morse.jpg"
+import book from "../../utils/book.jpg"
 
 // Project data with technologies list and images
 
