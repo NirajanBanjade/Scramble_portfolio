@@ -4,15 +4,20 @@ import ScrambleText from '../ScrambleText/ScrambleText';
 import RevealOnScroll from '../RevealOnScroll/RevealOnScroll';
 import kafka_img from "../../utils/Dashboard.png"
 import xstack_img from "../../utils/xtack.jpeg"
+import morse from "../../utils/morse.png"
+import book from "../../utils/book.png"
+
 // Project data with technologies list and images
 
 import { Github } from "lucide-react";
+import { img } from "framer-motion/client";
 export const ProjectData = [
 
   {
-    title: "BookHive – Collaborative Book Discussion Platform",
+    title: "BookHive",
     description: "BookHive is a MERN-stack collaborative reading platform supporting 80+ active users and 130+ records. I led backend API development, defined product requirements for authentication and group management, and coordinated a 4-person Agile team using Jira to deliver real-time interactions and data-driven feature iterations.",
     githublink: "https://github.com/NirajanBanjade/Bookhive",
+    image: book,
     technologies: ["MongoDB", "Express", "React", "Node.js", "Jira", "Agile"]
   },
   
@@ -20,18 +25,21 @@ export const ProjectData = [
     title: "Real-Time Yelp Analytics Pipeline",
     description: "A streaming data architecture built using Kafka and Python for near real-time sentiment analysis at scale. The system processes live data streams and visualizes insights through Elasticsearch and Kibana dashboards, enabling actionable business intelligence from large-scale review datasets.",
     githublink: "https://github.com/NirajanBanjade/Learning_kafka",
-    technologies: ["Kafka", "Python", "Elasticsearch", "Kibana"]
+    image: kafka_img,
+    technologies: ["Kafka", "Python", "Elasticsearch", "Kibana"],
+
   },
   
   {
     title: "Real-Time Morse Code Decoder",
     description: "A modular computer vision pipeline that decodes Morse code from live webcam and offline video sources using OpenCV. The system applies adaptive signal processing techniques to ensure robust decoding under variable lighting and environmental conditions.",
     githublink: "https://github.com/NirajanBanjade/Morse_code_Comp_vision",
+    image: morse,
     technologies: ["Python", "OpenCV", "Computer Vision"]
   },
   
   {
-    title : "Xstack (a copy extension of xstack)",
+    title : "Xstack",
     description: "Xstack is a Chrome extension that lets users copy, store, and manage multiple text snippets seamlessly, preventing lost clipboard content and improving productivity through persistent snippet management.",
     githublink: "https://github.com/NirajanBanjade/Xstack",
     image: xstack_img,

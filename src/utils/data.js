@@ -56,7 +56,7 @@ export const Data = [
       { "skill": "Kafka" },
       { "skill": "Jira" },
       { "skill": "Unit Testing" },
-      { "skill": "Agile/Scrum" },
+      { "skill": "Agile/Scrum" }
     ]
   },
   ];

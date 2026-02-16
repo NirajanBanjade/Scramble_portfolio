@@ -5,6 +5,7 @@ import img1 from "./1.png";
 import img2 from "./2.png";
 import img3 from "./3.png";
 import img4 from "./4.png";
+import nirajan from "./Nirajan.jpg"
 import ScrambleText from '../ScrambleText/ScrambleText';
 import RevealOnScroll from '../RevealOnScroll/RevealOnScroll';
 
@@ -68,7 +69,7 @@ const Hero = () => {
       <RevealOnScroll direction="right" delay={0.4}>
         <div className='Image'>
           <div>
-            <img src={nir} alt="Nirajan Banjade" />
+            <img src={nirajan} alt="Nirajan Banjade" />
           </div>
           
           <div>

@@ -1,56 +1,77 @@
-.skills-card{
+.skills-card {
     border-radius: 0.65rem;
     border: 1.5px solid skyblue;
     padding: 2.5rem;
     text-align: center;
-    background: rgba(22,17,47,0.398);
+    background: rgba(22, 17, 47, 0.398);
     backdrop-filter: blur(1rem);
-    position:relative;
-    cursor:pointer;
+    position: relative;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
-.skills-card:hover, .skills-card.active{
-    background: linear-gradient(180deg, rgb(216, 50, 50) 0%, #e65f7c 100%)
+
+.skills-card:hover, .skills-card.active {
+    background: linear-gradient(180deg, rgb(216, 50, 50) 0%, #e65f7c 100%);
 }
-.skils-card span{
-    font-size:1.3rem;
+
+.skills-card span {
+    font-size: 1.3rem;
     font-weight: 500;
 }
-.skill-icon{
+
+.skill-icon {
     width: 4rem;
-    height:4rem;
-    display:flex;
+    height: 4rem;
+    display: flex;
     align-items: center;
     justify-content: center;
     background: #2a2252;
     border-radius: 0.65rem;
     border: 1.5px solid skyblue;
     position: absolute;
-    top:-1rem;
+    top: -1rem;
     left: -1rem;
 }
-.skill-icon img{
-    width: 3.4rem;
-    height:auto;
-    object-fit:contain;
+
+/* Trigger animation when card becomes active */
+.skills-card.active .skill-icon {
+    animation: rotate360 0.6s ease-in-out forwards;
 }
-@media (max-width: 1025px){
-    .skills-card{
-        padding:2rem;
+
+/* Define the rotation animation */
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
     }
-    .skills-card span{
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.skill-icon img {
+    width: 3.4rem;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 1025px) {
+    .skills-card {
+        padding: 2rem;
+    }
+    .skills-card span {
         font-size: 1rem;
     }
-    .skill-icon{
+    .skill-icon {
         width: 3rem;
         height: 3rem;
     }
-    .skill0icon img{
+    .skill-icon img {
         width: 1.8rem;
     }
 }
-@media (max-width: 768px){
-    .skills-card span{
+
+@media (max-width: 768px) {
+    .skills-card span {
         font-size: 0.9rem;
     }
 }
