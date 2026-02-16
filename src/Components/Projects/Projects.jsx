@@ -10,7 +10,6 @@ import book from "../../utils/book.png"
 // Project data with technologies list and images
 
 import { Github } from "lucide-react";
-import { img } from "framer-motion/client";
 export const ProjectData = [
 
   {
